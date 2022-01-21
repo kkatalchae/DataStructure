@@ -2,16 +2,6 @@ package list;
 
 import java.util.NoSuchElementException;
 
-class Node<E> { // 노드 객체
-    E data;
-    Node<E> next; // 다음 노드를 가리키는 참조 변수
-
-    Node(E data) { // 생성자
-        this.data = data;
-        this.next = null;
-    }
-}
-
 /*
     # LinkedList
 
@@ -32,6 +22,16 @@ class Node<E> { // 노드 객체
 
 // 단일 연결 리스트
 public class SingleLinkedList<E> implements List<E> {
+
+    private class Node<E> { // 노드 객체
+        E data;
+        Node<E> next; // 다음 노드를 가리키는 참조 변수
+
+        Node(E data) { // 생성자
+            this.data = data;
+            this.next = null;
+        }
+    }
 
     private Node<E> head; // 리스트의 첫 노드
     private Node<E> tail; // 리스트의 마지막 노드드
